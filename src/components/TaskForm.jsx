@@ -2,11 +2,32 @@ import React from "react";
 import "../components/Tag.css";
 import { Tag } from "./Tag";
 
+import { useState } from "react";
+
 export function TaskForm() {
+  const [taskDatA, settaskdData] = useState({
+    name: "",
+    status: "To do",
+  });
+
+  const handleChange = (e) => {
+    const [name, value] = e.target;
+
+    settaskdData((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
+  console.log(taskDatA);
+
   return (
     <section className="app_Form">
       <div className="InputContainer">
-        <input type="text" className="Task_input" placeholder="enter Text" />
+        <input
+          type="text"
+          className="Task_input"
+          placeholder="enter Text"
+          onChange={handleChange}
+        />
       </div>
 
       <div className="Parent">

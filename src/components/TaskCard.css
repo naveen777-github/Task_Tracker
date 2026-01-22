@@ -1,0 +1,44 @@
+.cardbox {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #dcdcdc;
+  border-radius: 9px;
+  width: 300px;
+  height: 110px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.cardName {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.skillCard {
+  display: flex;
+  margin-left: 10px;
+  gap: 20px;
+}
+
+.bindiv {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.bin {
+  margin-right: 10px;
+  width: 20px;
+  opacity: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.bin:hover {
+  opacity: 80%;
+}
