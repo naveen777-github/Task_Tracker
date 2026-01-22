@@ -1,0 +1,15 @@
+.tack_column {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.imageClass {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.imageSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
