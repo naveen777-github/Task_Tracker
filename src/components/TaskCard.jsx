@@ -3,15 +3,16 @@ import React from "react";
 import { Tag } from "./Tag";
 import dustbin from "../assets/delete.png";
 
-export const TaskCard = () => {
+export const TaskCard = ({ title, tags }) => {
   return (
     <article className="cardbox">
-      <p className="cardName">This is sample text</p>
+      <p className="cardName">{title}</p>
 
       <div className="box">
         <div className="skillCard">
-          <Tag TagName="HTML" />
-          <Tag TagName="CSS" />
+          {tags.map((tag, index) => (
+            <Tag key={index} tagName={tag} selected={true} />
+          ))}
         </div>
 
         <div className="bindiv">

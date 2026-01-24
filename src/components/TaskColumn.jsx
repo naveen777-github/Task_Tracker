@@ -1,22 +1,23 @@
 import React from "react";
-import path1 from "../assets/direct-hit.png";
-import path2 from "../assets/check-mark-button.png";
-import path3 from "../assets/glowing-star.png";
+
 import "../components/TaskColumn.css";
 import { TaskCard } from "./TaskCard";
 
-export const TaskColumn = () => {
+export const TaskColumn = ({ icon, title, task, status }) => {
   return (
     <div className="imageSection">
-      {" "}
       <div className="col1">
-        <img src={path1} className="imageClass" /> <TaskCard />
-      </div>
-      <div className="col2">
-        <img src={path2} className="imageClass" /> <TaskCard />
-      </div>
-      <div className="col2">
-        <img src={path3} className="imageClass" /> <TaskCard />
+        <div className="imageBox">
+          <img className="imageClass" src={icon} alt={title} />
+
+          <p className="title">{title}</p>
+        </div>
+        {task.map(
+          (task, index) =>
+            task.status == status && (
+              <TaskCard key={index} title={task.title} tags={task.tags} />
+            ),
+        )}
       </div>
     </div>
   );

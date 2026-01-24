@@ -22,9 +22,9 @@
 .Parent {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 0;
+  gap: 15px;
 }
 
 .TodoList {
@@ -51,5 +51,6 @@
 
 .Child2 {
   display: flex;
+  justify-content: space-between;
   gap: 40px;
 }
