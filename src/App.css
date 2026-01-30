@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -14,4 +16,8 @@
   width: 100%;
   justify-content: center;
   justify-content: space-evenly;
+}
+
+.body {
+  font-family: "Montserrat", sans-serif;
 }

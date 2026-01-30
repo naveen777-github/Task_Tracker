@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/Tag.css";
 import { Tag } from "./Tag";
+import "../components/Taskform.css";
 
 import { useState } from "react";
 
@@ -24,6 +25,7 @@ export function TaskForm({ setTask }) {
     setTask((prev) => {
       return [...prev, taskDatA];
     });
+    settaskdData({ task: "", status: "To do", tags: [] });
   };
   const selectTag = (Tag) => {
     if (taskDatA.tags.some((items) => items == Tag)) {
@@ -51,6 +53,7 @@ export function TaskForm({ setTask }) {
           <input
             type="text"
             name="task"
+            value={taskDatA.task}
             className="Task_input"
             placeholder="enter Text"
             onChange={handleChange}
@@ -82,10 +85,15 @@ export function TaskForm({ setTask }) {
           </div>
 
           <div className="Child2">
-            <select className="TodoList" name="status" onChange={handleChange}>
+            <select
+              value={taskDatA.status}
+              className="TodoList"
+              name="status"
+              onChange={handleChange}
+            >
               <option>To do </option>
               <option>Doing </option>
-              <option>done </option>
+              <option>Done </option>
             </select>
 
             <button
